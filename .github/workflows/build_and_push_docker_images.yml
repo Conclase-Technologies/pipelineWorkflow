@@ -9,7 +9,7 @@ on:
       tag:
         required: false
         type: string
-        description: "A username passed from the caller workflow"
+        description: "docker tag on the containers"
       dockerfile_location:
         required: true
         type: string
