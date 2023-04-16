@@ -26,10 +26,10 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }}
           submodules: true
         
-#       - name: disable safe dir
-#         uses: srt32/git-actions@v0.0.3
-#         with:
-#           args: git config --global --add safe.directory '*'
+      - name: disable safe dir
+        uses: srt32/git-actions@v0.0.3
+        with:
+          args: git config --global --add safe.directory '*'
           
 #       - name: Checkout submodules
 #         uses: srt32/git-actions@v0.0.3
