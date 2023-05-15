@@ -31,10 +31,10 @@ jobs:
         with:
           args: git config --global --add safe.directory '*'
           
-#       - name: Checkout submodules
-#         uses: srt32/git-actions@v0.0.3
-#         with:
-#           args: git submodule update --init --recursive
+      - name: Checkout submodules
+        uses: srt32/git-actions@v0.0.3
+        with:
+          args: git submodule update --init --recursive
 
       # Login into DockerHub
       - name: Login to Docker Hub
