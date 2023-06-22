@@ -7,7 +7,7 @@ on:
         type: string
         description: "path to the executed script"
       docker_repo:
-        required: false
+        required: true
         type: string
         description: "The docker hub repo for the specific application"
       
