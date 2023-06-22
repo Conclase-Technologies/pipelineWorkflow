@@ -6,10 +6,6 @@ on:
         required: true
         type: string
         description: "path to the executed script"
-      docker_repo:
-        required: false
-        type: string
-        description: "The docker hub repo for the specific application"
       
 
 jobs:
@@ -27,4 +23,4 @@ jobs:
         run: ssh-keyscan -p ${{ secrets.SSH_PORT}} -H ${{ secrets.HOST }}  >> ~/.ssh/known_hosts
       - name: Deploy OVER SSH
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} ./${{inputs.executed_file}} ${{ secrets.DOCKER_USERNAME }} ${{inputs.docker_repo}} ${{ secrets.INTERNAL_ID}}
+          ssh -o StrictHostKeyChecking=no ${{ secrets.USER }}@${{ secrets.HOST }} ./${{inputs.executed_file}} ${{ secrets.DOCKER_USERNAME }} ${{ secrets.DOCKER_PASSWORD }}
